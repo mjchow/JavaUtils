@@ -65,4 +65,13 @@ public class DateUtil {
     public static String formatDate(Date date, SimpleDateFormat dataFormat) {
     	return dataFormat.format(date);
     }
+    
+    /**
+     * 将data转String类型的显示模式
+     * @param time   时间戳  
+     */
+    public static String formatDate(Long time, SimpleDateFormat dataFormat) {
+        Date date = new Date(time);
+        return dataFormat.format(date);
+    }
 }
