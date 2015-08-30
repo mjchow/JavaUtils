@@ -108,20 +108,28 @@ public class ParamTool {
 	 * @return
 	 */
 	public static boolean isBasicDataType(Field toField) {
-		if(toField.getType().equals(String.class)
-				|| toField.getType().equals(Integer.class)
-				|| toField.getType().equals(Double.class)
-				|| toField.getType().equals(Float.class)
-				|| toField.getType().equals(Long.class)
-				|| toField.getType().equals(Boolean.class)
-				|| toField.getType().equals(Byte.class)
-				|| toField.getType().equals(Short.class)
-				|| toField.getType().equals(Character.class)
-				|| toField.getType().equals(Date.class)) {
-			return true;
-		}
-		return false;
-	}
+        if(toField.getType().equals(String.class)
+                || toField.getType().equals(Integer.class)
+                || toField.getType().equals(int.class)
+                || toField.getType().equals(Double.class)
+                || toField.getType().equals(double.class)
+                || toField.getType().equals(Float.class)
+                || toField.getType().equals(float.class)
+                || toField.getType().equals(Long.class)
+                || toField.getType().equals(long.class)
+                || toField.getType().equals(Boolean.class)
+                || toField.getType().equals(boolean.class)
+                || toField.getType().equals(Byte.class)
+                || toField.getType().equals(byte.class)
+                || toField.getType().equals(Short.class)
+                || toField.getType().equals(short.class)
+                || toField.getType().equals(Character.class)
+                || toField.getType().equals(char.class)
+                || toField.getType().equals(Date.class)) {
+            return true;
+        }
+        return false;
+    }
 	
 	
 	
