@@ -66,7 +66,13 @@ public class ParamTool {
 						e.printStackTrace();
 					}
 					
-					paramSet(fromField.get(from), toField.get(to), null);
+					Object fromFieldValue = fromField.get(from);
+                    //如果是null的值的话就没有必要再进行下去了
+                    if(fromFieldValue == null) {
+                        toField.set(to, null);
+                    } else {
+                        paramSet(fromField.get(from), toField.get(to), null);
+                    }
 				}
 			} catch (NoSuchFieldException e) {
 				e.printStackTrace();
